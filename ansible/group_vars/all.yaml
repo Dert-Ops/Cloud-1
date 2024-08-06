@@ -1,20 +1,17 @@
-MYSQL_ROOT_PASSWORD: "123"
-MYSQL_DATABASE: "clouddb"
-MYSQL_USER: "dertops"
-MYSQL_PASSWORD: "123"
+WP_URL: "dertops.42.tr"
+WP_TITLE: "Selam_Cloud-1"
+
+WP_ADMIN_LOGIN: "cloud"
+WP_ADMIN_PASSWORD: "123123"
+WP_ADMIN_EMAIL: "cloud@wordpress.com"
+
+WP_USER_LOGIN: "cloud"
+WP_USER_PASSWORD: "123"
+WP_USER_EMAIL: "cloud@wordpress.com"
 
 PMA_HOST: "mariadb"
-PMA_USER: "root"
+PMA_USER: "dertops"
 PMA_PASSWORD: "123"
-
-WP_URL: "http://dertops.cloud.com.tr"
-WP_TITLE: "Selam_Cloud-1"
-WP_ADMIN_LOGIN: "admin"
-WP_ADMIN_PASSWORD: "123"
-WP_ADMIN_EMAIL: "dertops@cloud.tr"
-WP_USER_LOGIN: "dertops"
-WP_USER_PASSWORD: "123"
-WP_USER_EMAIL: "dertops42@cloud.tr"
 
 ansible_user: "ubuntu"
 

@@ -33,11 +33,6 @@ services:
     restart: always
     volumes:
       - db:/var/lib/mysql
-    environment:
-      MYSQL_ROOT_PASSWORD: "{{ MYSQL_ROOT_PASSWORD }}"
-      MYSQL_DATABASE: "{{ MYSQL_DATABASE }}"
-      MYSQL_USER: "{{ MYSQL_USER }}"
-      MYSQL_PASSWORD: "{{ MYSQL_PASSWORD }}"
 
   wordpress:
     image: wordpress
@@ -53,18 +48,15 @@ services:
     volumes:
       - wp:/var/www/html
     environment:
-      WORDPRESS_DB_HOST: mariadb:3306
-      WORDPRESS_DB_USER: "{{ MYSQL_USER }}"
-      WORDPRESS_DB_PASSWORD: "{{ MYSQL_PASSWORD }}"
-      WORDPRESS_DB_NAME: "{{ MYSQL_DATABASE }}"
-      WORDPRESS_URL: "{{ WP_URL }}"
-      WORDPRESS_TITLE: "{{ WP_TITLE }}"
-      WORDPRESS_ADMIN_LOGIN: "{{ WP_ADMIN_LOGIN }}"
-      WORDPRESS_ADMIN_PASSWORD: "{{ WP_ADMIN_PASSWORD }}"
-      WORDPRESS_ADMIN_EMAIL: "{{ WP_ADMIN_EMAIL }}"
-      WORDPRESS_USER_LOGIN: "{{ WP_USER_LOGIN }}"
-      WORDPRESS_USER_PASSWORD: "{{ WP_USER_PASSWORD }}"
-      WORDPRESS_USER_EMAIL: "{{ WP_USER_EMAIL }}"
+      WP_DB_HOST: mariadb:3306
+      WP_URL: "{{ WP_URL }}"
+      WP_TITLE: "{{ WP_TITLE }}"
+      WP_USER_LOGIN: "{{ WP_USER_LOGIN }}"
+      WP_ADMIN_LOGIN: "{{ WP_ADMIN_LOGIN }}"
+      WP_ADMIN_PASSWORD: "{{ WP_ADMIN_PASSWORD }}"
+      WP_USER_PASSWORD: "{{ WP_USER_PASSWORD }}"
+      WP_USER_EMAIL: "{{ WP_USER_EMAIL }}"
+      WP_ADMIN_EMAIL: "{{ WP_ADMIN_EMAIL }}"
 
   phpmyadmin:
     image: phpmyadmin
