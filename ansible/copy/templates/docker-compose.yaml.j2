@@ -79,6 +79,8 @@ services:
     restart: always
     environment:
       PMA_HOST: "{{ PMA_HOST }}"
+      PMA_USER: "{{ PMA_USER }}"
+      PMA_PASSWORD: "{{ PMA_PASSWORD }}"
 
   nginx:
     image: nginx
