@@ -1,0 +1,42 @@
+---
+- name: Install Docker-Compose&Set Permission
+  ansible.builtin.get_url:
+    url: https://github.com/docker/compose/releases/download/1.29.2/docker-compose-Linux-x86_64
+    dest: /usr/local/bin/docker-compose
+    mode: '755'
+
+- name: Copy cloud directory
+  copy:
+    src: ../webapp.zip
+    dest: /home/{{ ansible_user }}
+    owner: "{{ ansible_user }}"
+    group: "{{ ansible_user }}"
+    mode: '0755'
+  become: yes
+  become_user: "{{ ansible_user }}"
+
+- name: Unzipping moved zip file
+  unarchive:
+    src: /home/{{ ansible_user }}/webapp.zip
+    dest: /home/{{ ansible_user }}
+    remote_src: yes
+
+- name: Remove zip file
+  file:
+    path: /home/{{ ansible_user }}/webapp.zip
+    state: absent
+
+- name: Creating data wordpress folder
+  file:
+    path: /home/{{ ansible_user }}/data/wordpress
+    state: directory
+
+- name: Creating data mariadb folder
+  file:
+    path: /home/{{ ansible_user }}/data/mariadb
+    state: directory
+
+- name: Generate the compose file
+  template:
+    src: docker-compose.yaml.j2
+    dest: /home/{{ ansible_user }}/docker-compose.yaml

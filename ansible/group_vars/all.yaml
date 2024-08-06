@@ -1,0 +1,21 @@
+MYSQL_ROOT_PASSWORD: "123"
+MYSQL_DATABASE: "clouddb"
+MYSQL_USER: "dertops"
+MYSQL_PASSWORD: "123"
+
+PMA_HOST: "mariadb"
+PMA_USER: "dertops"
+PMA_PASSWORD: "123"
+
+WP_URL: "http://dertops.cloud.com.tr"
+WP_TITLE: "Selam Cloud-1"
+WP_ADMIN_LOGIN: "admin"
+WP_ADMIN_PASSWORD: "123"
+WP_ADMIN_EMAIL: "dertops@cloud.tr"
+WP_USER_LOGIN: "dertops"
+WP_USER_PASSWORD: "123"
+WP_USER_EMAIL: "dertops42@cloud.tr"
+
+ansible_user: "ubuntu"
+
+docker_version: 1.29.2

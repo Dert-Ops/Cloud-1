@@ -1,0 +1,5 @@
+---
+- name: Run Docker Compose
+  shell: docker-compose -f /home/{{ ansible_user }}/docker-compose.yaml up -d
+  args:
+    chdir: /home/{{ ansible_user }}
