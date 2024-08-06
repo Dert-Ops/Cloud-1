@@ -37,29 +37,7 @@ define( 'DB_CHARSET', 'utf8' );
 /** The database collate type. Don't change this if in doubt. */
 define( 'DB_COLLATE', '' );
 
-//** Redis cache settings. */
-define('WP_CACHE', true);
-define('WP_CACHE_KEY_SALT', 'dertops@cloud.tr');
 
-//** Try Redis container */
-// define('WP_REDIS_HOST', 'redis');
-// define('WP_REDIS_PORT', 6379);
-// define( 'WP_REDIS_PASSWORD', '$REDIS_PWD' );
-// define('WP_REDIS_TIMEOUT', 1);
-// define('WP_REDIS_READ_TIMEOUT', 1);
-// define('WP_REDIS_DATABASE', 0);
-
-/**#@+
- * Authentication unique keys and salts.
- *
- * Change these to different unique phrases! You can generate these using
- * the {@link https://api.wordpress.org/secret-key/1.1/salt/ WordPress.org secret-key service}.
- *
- * You can change these at any point in time to invalidate all existing cookies.
- * This will force all users to have to log in again.
- *
- * @since 2.6.0
- */
 define('AUTH_KEY',         'yf2k[~%6Y-H}Nl>2ZD4t<+Rp#dD~ rO|sWl`Qal_m-APzz:-o{,G^/muMhCWF A;');
 define('SECURE_AUTH_KEY',  'LP~SrjDmZ,u_-DJqV/l|iJC%PSsy)IkVK ETuVu&pn`AX%y]&UA38s0_5oTsAL C');
 define('LOGGED_IN_KEY',    '0,5Mb_F%S=O~,N6-)-FirWRI vjc?eZ`kT5bA9|NE w0i.:k=ZPV5dl2~1#aj>xL');
@@ -91,7 +69,7 @@ $table_prefix = 'wp_';
  *
  * @link https://wordpress.org/support/article/debugging-in-wordpress/
  */
-define( 'WP_DEBUG', false );
+define( 'WP_DEBUG', true );
 
 /* Add any custom values between this line and the "stop editing" line. */
 

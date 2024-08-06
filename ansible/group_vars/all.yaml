@@ -4,11 +4,11 @@ MYSQL_USER: "dertops"
 MYSQL_PASSWORD: "123"
 
 PMA_HOST: "mariadb"
-PMA_USER: "dertops"
+PMA_USER: "root"
 PMA_PASSWORD: "123"
 
 WP_URL: "http://dertops.cloud.com.tr"
-WP_TITLE: "Selam Cloud-1"
+WP_TITLE: "Selam_Cloud-1"
 WP_ADMIN_LOGIN: "admin"
 WP_ADMIN_PASSWORD: "123"
 WP_ADMIN_EMAIL: "dertops@cloud.tr"
