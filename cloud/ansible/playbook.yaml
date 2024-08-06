@@ -1,33 +1,15 @@
 ---
-- hosts: all
-  become: yes
+- name: Setup Docker on Ubuntu Server 22.04
+  hosts: all
+  become: true
+  remote_user: root
+  roles:
+    - config
+    - docker
   tasks:
-    - name: Wait for dpkg lock to be released
-      wait_for:
-        path: /var/lib/dpkg/lock-frontend
-        state: absent
-        timeout: 300
-
-    - name: Ensure Docker is installed
-      apt:
-        name: docker.io
-        state: present
-        update_cache: yes
-
-    - name: Gather system facts
-      setup:
-
-    - name: Ensure Docker Compose is installed
-      get_url:
-        url: "https://github.com/docker/compose/releases/download/{{ docker_version }}/docker-compose-{{ ansible_system }}-{{ ansible_architecture }}"
-        dest: /usr/local/bin/docker-compose
-        mode: '0755'
-      vars:
-        docker_version: "1.29.2"
-
     - name: Copy cloud directory
       copy:
-        src: ../cloud/
+        src: ../../cloud/
         dest: /home/{{ ansible_user }}/cloud/
         owner: "{{ ansible_user }}"
         group: "{{ ansible_user }}"
