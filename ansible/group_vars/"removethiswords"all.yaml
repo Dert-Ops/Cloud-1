@@ -1,0 +1,18 @@
+WP_URL: "example"
+WP_TITLE: "example"
+
+WP_ADMIN_LOGIN: "example"
+WP_ADMIN_PASSWORD: "example"
+WP_ADMIN_EMAIL: "example"
+
+WP_USER_LOGIN: "example"
+WP_USER_PASSWORD: "example"
+WP_USER_EMAIL: "example"
+
+PMA_HOST: "example"
+PMA_USER: "example"
+PMA_PASSWORD: "example"
+
+ansible_user: "example"
+
+docker_version: 1.29.2

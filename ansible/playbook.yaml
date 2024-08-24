@@ -1,10 +1,10 @@
 ---
-- name: Setup Docker on Ubuntu Server 22.04
+- name: Setup All Systems on AWS Server
   hosts: all
   become: true
   remote_user: root
   roles:
     - config
-    # - docker
+    - docker
     - copy
     - run

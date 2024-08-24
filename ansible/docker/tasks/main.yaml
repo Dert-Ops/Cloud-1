@@ -6,9 +6,13 @@
 
 - name: Add repository into sources list
   ansible.builtin.apt_repository:
-    repo: deb [arch=amd64] https://download.docker.com/linux/ubuntu {{ ansible_lsb.codename }} stable
+    repo: deb [arch=amd64] https://download.docker.com/linux/ubuntu jammy stable
     state: present
     filename: docker
+
+- name: Update APT package index
+  ansible.builtin.apt:
+    update_cache: yes
 
 - name: Install Docker 23.0.1-1
   ansible.builtin.apt:
@@ -47,3 +51,9 @@
     name: docker
     state: restarted
     enabled: true
+
+- name: Install Docker-Compose&Set Permission
+  ansible.builtin.get_url:
+    url: https://github.com/docker/compose/releases/download/1.29.2/docker-compose-Linux-x86_64
+    dest: /usr/local/bin/docker-compose
+    mode: '755'
