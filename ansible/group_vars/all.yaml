@@ -1,0 +1,18 @@
+WP_URL: "dertops.42.tr"
+WP_TITLE: "Selam_Cloud-1"
+
+WP_ADMIN_LOGIN: "cloud"
+WP_ADMIN_PASSWORD: "123123"
+WP_ADMIN_EMAIL: "cloud@wordpress.com"
+
+WP_USER_LOGIN: "cloud"
+WP_USER_PASSWORD: "123"
+WP_USER_EMAIL: "cloud@wordpress.com"
+
+PMA_HOST: "mariadb"
+PMA_USER: "dertops"
+PMA_PASSWORD: "123"
+
+ansible_user: "ubuntu"
+
+docker_version: 1.29.2

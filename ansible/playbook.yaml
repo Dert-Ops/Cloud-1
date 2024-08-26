@@ -4,7 +4,19 @@
   become: true
   remote_user: root
   roles:
-    - config
-    - docker
-    - copy
-    - run
+    - role: config
+      until: result is success
+      retries: 3
+      delay: 5
+    - role: docker
+      until: result is success
+      retries: 3
+      delay: 5
+    - role: copy
+      until: result is success
+      retries: 3
+      delay: 5
+    - role: run
+      until: result is success
+      retries: 3
+      delay: 5

@@ -1,2 +1,0 @@
-[ec2_instances]
-3.87.141.153 ansible_user=ubuntu

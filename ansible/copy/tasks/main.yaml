@@ -1,5 +1,5 @@
 ---
-- name: Copy cloud directory
+- name: Copy core directory
   copy:
     src: ../webapp.zip
     dest: /home/{{ ansible_user }}
