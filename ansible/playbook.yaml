@@ -1,6 +1,6 @@
 ---
 - name: Setup All Systems on AWS Server
-  hosts: all
+  hosts: amazon_instances
   become: true
   remote_user: root
   roles:
