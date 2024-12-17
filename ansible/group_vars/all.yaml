@@ -13,6 +13,6 @@ PMA_HOST: "mariadb"
 PMA_USER: "dertops"
 PMA_PASSWORD: "123"
 
-ansible_user: "ubuntu"
+ansible_user: "root"
 
 docker_version: 1.29.2

@@ -12,14 +12,14 @@ volumes:
     driver_opts:
       type: none
       o: bind
-      device: /home/{{ ansible_user }}/data/wordpress
+      device: /{{ ansible_user }}/data/wordpress
   db:
     driver: local
     name: db_volume
     driver_opts:
       type: none
       o: bind
-      device: /home/{{ ansible_user }}/data/mariadb
+      device: /{{ ansible_user }}/data/mariadb
 
 services:
   mariadb:

@@ -1,6 +1,6 @@
 ---
 - name: Setup All Systems on AWS Server
-  hosts: amazon_instances
+  hosts: sehmus_instances
   become: true
   remote_user: root
   roles:
