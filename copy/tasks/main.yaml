@@ -1,0 +1,51 @@
+---
+- name: Copy core directory
+  copy:
+    src: ../webapp.zip
+    dest: /{{ ansible_directory }}{{ ansible_user }}
+    owner: "{{ ansible_user }}"
+    group: "{{ ansible_user }}"
+    mode: '0755'
+  become: yes
+  become_user: "{{ ansible_user }}"
+
+- name: Unzipping moved zip file
+  unarchive:
+    src: /{{ ansible_directory }}{{ ansible_user }}/webapp.zip
+    dest: /{{ ansible_directory }}{{ ansible_user }}
+    remote_src: yes
+
+- name: Remove zip file
+  file:
+    path: /{{ ansible_directory }}{{ ansible_user }}/webapp.zip
+    state: absent
+
+- name: Creating data wordpress folder
+  file:
+    path: /{{ ansible_directory }}{{ ansible_user }}/data/wordpress
+    state: directory
+
+- name: Creating data mariadb folder
+  file:
+    path: /{{ ansible_directory }}{{ ansible_user }}/data/mariadb
+    state: directory
+
+- name: Generate The Compose File
+  template:
+    src: docker-compose.yaml.j2
+    dest: /{{ ansible_directory }}{{ ansible_user }}/docker-compose.yaml
+
+- name: Generate The Nginx File
+  template:
+    src: nginx-conf.j2
+    dest: /{{ ansible_directory }}{{ ansible_user }}/core/nginx/conf/default.conf
+
+- name: Generate The Db_initial File
+  template:
+    src: initial_db.sql.j2
+    dest: /{{ ansible_directory }}{{ ansible_user }}/core/mariadb/tools/initial_db.sql
+
+- name: Generate The wp-config.php File
+  template:
+    src: wp-config.php.j2
+    dest: /{{ ansible_directory }}{{ ansible_user }}/core/wordpress/tools/wp-config.php

@@ -1,8 +1,9 @@
 ---
-- name: Setup All Systems on AWS Server
-  hosts: sehmus_instances
+- name: Setup All Systems
+  hosts: sehmus_instances aws_instances
   become: true
-  remote_user: root
+  become_user: root
+
   roles:
     - role: config
       until: result is success

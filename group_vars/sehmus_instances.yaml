@@ -1,0 +1,7 @@
+WP_URL: "31.8.22.15"
+NGINX_URL: "31.8.22.15"
+WP_TITLE: "Selamlar_Burasi_Sehmus_Instance_Wordpress"
+
+ansible_user: "root"
+ansible_host: "31.8.22.15"
+ansible_directory: ""

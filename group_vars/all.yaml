@@ -1,0 +1,24 @@
+WP_ADMIN_LOGIN: "cloud"
+WP_ADMIN_PASSWORD: "123123"
+WP_ADMIN_EMAIL: "cloud@wordpress.com"
+WP_USER_LOGIN: "cloud"
+WP_USER_PASSWORD: "123"
+WP_USER_EMAIL: "cloud@wordpress.com"
+
+docker_version: 1.29.2
+
+
+
+AUTH_KEY: "R+BOM,Lf{z6,&FU| o oM&F<(^`3=h7k[)PcwcP|j+Q^o62?)ruy48^DC/]"
+SECURE_AUTH_KEY: "ji%R[^lpe1+uVcx@uGgXi%-9TnY t/VE3V|q|iViPv}Y`m^q{/jav[$Q0qo"
+LOGGED_IN_KEY: "Y[A44s{ 8[+T*>l=]yv#p<5H.^;@(%<-TO.qju3*D3_$!(@Ff9^U"
+NONCE_KEY: ",Jm:IH<nW8=:IEE+Z}OewGT.>S<2.zP? aFV&+qZ-p)b6?x>:lVQ2i.kmxY2[+"
+AUTH_SALT: "@P6SVf%&8/1)GIHyxv,ag9Q!{_C#P 8EcS|.UltatFZ{xCTg|ez^5kqMt%@.Q+"
+SECURE_AUTH_SALT: "--e%V|*5$+{AOEdy{x<F0`M9o-t|D,~z.xG<b-+vC#e+B!#l[2,M`*-"
+LOGGED_IN_SALT: "oDW&/B;)d%mM86P~hI:rG0.[-6Hie|ew@4&I-Co#8v?rnh9/<>e8Fe{AtM,|8"
+NONCE_SALT: "czx(-8gz@u*JWWsL,dREay{.n3ST5x|X~q3j=b-%j>_;yxN.a"
+
+DB_NAME: "wordpress"
+DB_USER: "dertops"
+DB_PASSWORD: "123"
+DB_HOST: "mariadb"
